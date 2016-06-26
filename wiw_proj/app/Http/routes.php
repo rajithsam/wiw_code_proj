@@ -23,7 +23,7 @@ Route::group(['middleware' => ['b.auth']], function(){
 
 Route::group(['middleware' => ['b.auth','b.auth.manager']], function() {
   Route::get('/manager/shifts/new','ManagerController@newShift');
-  Route::post('/manager/shifts','ManagerController@createShift');
+  Route::post('/manager/shift','ManagerController@createShift');
   Route::get('/manager/shifts','ManagerController@getShifts');
   Route::get('/manager/shift/{shift}','ManagerController@getShift');
   Route::put('/manager/shift/{shift}','ManagerController@editShift');
